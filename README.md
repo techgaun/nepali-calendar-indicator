@@ -17,3 +17,8 @@ make install
 # if you see permission errors (which should be due to system-wide pip)
 sudo make install
 ```
+
+### Notes
+
+- It currently uses local timezone. Some might prefer to use Nepal/Kathmandu timezone regardless of what timezone they are. Please make an issue if you think we should default to Nepal/Kathmandu.
+- We have open [issues](https://github.com/techgaun/nepali-calendar-indicator/issues).
