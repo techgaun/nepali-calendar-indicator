@@ -21,4 +21,4 @@ sudo make install
 ### Notes
 
 - It currently uses local timezone. Some might prefer to use Nepal/Kathmandu timezone regardless of what timezone they are. Please make an issue if you think we should default to Nepal/Kathmandu.
-- We have open [issues](https://github.com/techgaun/nepali-calendar-indicator/issues).
+- We have open [issues](https://github.com/techgaun/nepali-calendar-indicator/issues). If you want to contribute, you're more than welcome to grab those.
