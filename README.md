@@ -1,4 +1,4 @@
-# nepali-calendar-indicator
+# nepali-calendar-indicator ![Nepcal Screenshot](screenshot.png)
 > Simple indicator applet to show Nepali date and calendar
 
 Showing the calendar is not done yet. If anybody wants to contribute, you're welcome to do so :)
@@ -17,7 +17,3 @@ make install
 # if you see permission errors (which should be due to system-wide pip)
 sudo make install
 ```
-
-After the successful installation, it looks like below:
-
-![Nepcal Screenshot](screenshot.png)
