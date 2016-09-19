@@ -25,6 +25,15 @@ sudo make install
 nepcal_applet &
 ```
 
+#### XFCE
+
+This applet should work with Xfce DE once you enable Indicator plugin from `right-click panel > Panel > Panel preferences > Item > Add Item`.
+If you don't see indicator plugin in the list of items to add, try installing `xfce4-indicator-plugin`.
+
+```shell
+sudo apt install -y xfce4-indicator-plugin
+```
+
 ### Notes
 
 - It currently uses local timezone. Some might prefer to use Nepal/Kathmandu timezone regardless of what timezone they are. Please make an issue if you think we should default to Nepal/Kathmandu.
