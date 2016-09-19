@@ -5,7 +5,13 @@ Showing the calendar is not done yet. If anybody wants to contribute, you're wel
 
 ### Installation
 
-The goal is to be able to do `pip install nepcal_applet` and have the applet running but there's little bit of work that needs to be done for that. This requires python 3.x and python-gi.
+The goal is to be able to do `pip install nepcal_applet` and have the applet running but there's little bit of work that needs to be done for that.
+
+This requires python 3.x and python-gi. Make sure you have python-pip3 installed.
+
+```shell
+sudo apt install -y python3-pip
+```
 
 For time-being, the following works:
 
@@ -16,6 +22,7 @@ make install
 
 # if you see permission errors (which should be due to system-wide pip)
 sudo make install
+nepcal_applet &
 ```
 
 ### Notes
