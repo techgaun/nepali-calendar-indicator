@@ -49,7 +49,7 @@ def quit(src):
 
 def main():
     indicator.set_status(ai.IndicatorStatus.ACTIVE)
-    indicator.set_label(get_today(), "")
+    set_label()
     gobject.timeout_add(5000, set_label)
     indicator.set_menu(menu())
     signal.signal(signal.SIGINT, signal.SIG_DFL)
