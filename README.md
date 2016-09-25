@@ -34,6 +34,17 @@ If you don't see indicator plugin in the list of items to add, try installing `x
 sudo apt install -y xfce4-indicator-plugin
 ```
 
+#### Arch Linux (FixMe)
+
+On arch linux with XFCE DE, you can install xfce4-indicator-plugin with:
+
+```shell
+yaourt -S xfce4-indicator-plugin
+yaourt libappindicator-gtk3
+```
+
+I assume the later one should come when you install xfce4-indicator-plugin though.
+
 ### Notes
 
 - It currently uses local timezone. Some might prefer to use Nepal/Kathmandu timezone regardless of what timezone they are. Please make an issue if you think we should default to Nepal/Kathmandu.
