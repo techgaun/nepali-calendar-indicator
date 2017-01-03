@@ -36,11 +36,21 @@ def set_label():
 
 def menu():
     menu = gtk.Menu()
+    item_convert = gtk.MenuItem('Date Converter')
+    item_convert.connect('activate', open_convert_dialog)
+    menu.append(item_convert)
     item_quit = gtk.MenuItem('Quit')
     item_quit.connect('activate', quit)
     menu.append(item_quit)
     menu.show_all()
     return menu
+
+
+def open_convert_dialog(src):
+    dialog = gtk.Dialog('Convert AD to BS and Vice Versa',
+                        None, 1)
+    dialog.set_default_size(250, 250)
+    dialog.show_all()
 
 
 def quit(src):
