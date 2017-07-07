@@ -47,5 +47,5 @@ I assume the later one should come when you install xfce4-indicator-plugin thoug
 
 ## Notes
 
-- It currently uses local timezone. Some might prefer to use Nepal/Kathmandu timezone regardless of what timezone they are. Please make an issue if you think we should default to Nepal/Kathmandu.
+- It currently uses `Asia/Kathmandu` timezone. The date displayed will be the date local to Nepal.
 - We have open [issues](https://github.com/techgaun/nepali-calendar-indicator/issues). If you want to contribute, you're more than welcome to grab those.

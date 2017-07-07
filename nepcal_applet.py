@@ -23,6 +23,7 @@ indicator = ai.Indicator.new(APPINDICATOR_ID,
 
 
 def get_today():
+    os.environ['TZ'] = 'Asia/Kathmandu'
     today = date.today().strftime('%Y/%m/%d')
     bs_today = adbs.ad_to_bs(today)['ne']
     return '{} {} {}, {}'.format(bs_today['year'], bs_today['str_month'],
@@ -64,6 +65,7 @@ def main():
     indicator.set_menu(menu())
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     gtk.main()
+
 
 if __name__ == '__main__':
     main()
