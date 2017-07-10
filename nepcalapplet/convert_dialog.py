@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import adbs
+from .utils import format_output_date, format_input_date
 try:
     import gi
     gi.require_version('Gtk', '3.0')
@@ -66,13 +67,13 @@ class ConverterDialog(gtk.Window):
             ad_year = self.year_text.get_text()
             ad_month = self.month_text.get_text()
             ad_day = self.day_text.get_text()
-            date = '{}/{}/{}'.format(ad_year, ad_month, ad_day)
-            result = adbs.ad_to_bs(date)['ne']
+            date = format_input_date(ad_year, ad_month, ad_day)
+            result = format_output_date(adbs.ad_to_bs(date))
         elif self.choice == 'bs2ad':
             bs_year = self.year_text.get_text()
             bs_month = self.month_text.get_text()
             bs_day = self.day_text.get_text()
-            date = '{}/{}/{}'.format(bs_year, bs_month, bs_day)
-            result = adbs.ad_to_bs(date)['ne']
+            date = format_input_date(bs_year, bs_month, bs_day)
+            result = format_output_date(adbs.bs_to_ad(date), None)
 
         self.convert_label.set_text(result)

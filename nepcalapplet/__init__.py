@@ -5,6 +5,7 @@ import os
 import signal
 from datetime import date
 from .convert_dialog import ConverterDialog
+from .utils import format_output_date
 
 try:
     import gi
@@ -26,9 +27,8 @@ indicator = ai.Indicator.new(APPINDICATOR_ID,
 def get_today():
     os.environ['TZ'] = 'Asia/Kathmandu'
     today = date.today().strftime('%Y/%m/%d')
-    bs_today = adbs.ad_to_bs(today)['ne']
-    return '{} {} {}, {}'.format(bs_today['year'], bs_today['str_month'],
-                                 bs_today['day'], bs_today['str_day_of_week'])
+    bs_today = adbs.ad_to_bs(today)
+    return format_output_date(bs_today)
 
 
 def set_label():
