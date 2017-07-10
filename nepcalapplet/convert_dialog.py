@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import adbs
 try:
     import gi
     gi.require_version('Gtk', '3.0')
@@ -60,7 +61,18 @@ class ConverterDialog(gtk.Window):
         self.choice = choice
 
     def handle_convert(self, _btn):
+        result = None
         if self.choice == 'ad2bs':
-            self.convert_label.set_text('ad2bs')
+            ad_year = self.year_text.get_text()
+            ad_month = self.month_text.get_text()
+            ad_day = self.day_text.get_text()
+            date = '{}/{}/{}'.format(ad_year, ad_month, ad_day)
+            result = adbs.ad_to_bs(date)['ne']
         elif self.choice == 'bs2ad':
-            self.convert_label.set_text('bs2ad')
+            bs_year = self.year_text.get_text()
+            bs_month = self.month_text.get_text()
+            bs_day = self.day_text.get_text()
+            date = '{}/{}/{}'.format(bs_year, bs_month, bs_day)
+            result = adbs.ad_to_bs(date)['ne']
+
+        self.convert_label.set_text(result)
