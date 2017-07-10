@@ -56,6 +56,8 @@ class ConverterDialog(gtk.Window):
         grid.attach(convert_btn, 0, 4, 1, 2)
 
         self.convert_label = gtk.Label('')
+        self.convert_label.set_selectable(True)
+        self.convert_label.set_use_markup(True)
         grid.attach(self.convert_label, 1, 6, 1, 3)
 
     def handle_convert_choice(self, _rbtn, choice):
@@ -76,4 +78,5 @@ class ConverterDialog(gtk.Window):
             date = format_input_date(bs_year, bs_month, bs_day)
             result = format_output_date(adbs.bs_to_ad(date), None)
 
-        self.convert_label.set_text(result)
+        result = '<span size="large">{}</span>'.format(result)
+        self.convert_label.set_markup(result)
