@@ -19,11 +19,10 @@ For time-being, the following works:
 ```shell
 git clone https://github.com/techgaun/nepali-calendar-indicator.git
 cd nepali-calendar-indicator
-make install
-
+make init
 # if you see permission errors (which should be due to system-wide pip)
-sudo make install
-nepcal_applet &
+sudo make init
+python . &
 ```
 
 ### XFCE
