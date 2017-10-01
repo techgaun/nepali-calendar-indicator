@@ -14,15 +14,10 @@ This requires python 3.x and python-gi. Make sure you have python-pip3 installed
 sudo apt install -y python3-pip
 ```
 
-For time-being, the following works:
-
 ```shell
-git clone https://github.com/techgaun/nepali-calendar-indicator.git
-cd nepali-calendar-indicator
-make init
+pip install git+https://github.com/techgaun/nepali-calendar-indicator
 # if you see permission errors (which should be due to system-wide pip)
-sudo make init
-python . &
+sudo pip install git+https://github.com/techgaun/nepali-calendar-indicator
 ```
 
 ### XFCE
