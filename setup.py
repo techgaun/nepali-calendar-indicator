@@ -20,5 +20,6 @@ setup(
     nepcal_applet=nepcalapplet.__init__:main
     """,
     license='Apache-2.0',
+    include_package_data = True,
     packages=find_packages(exclude=('tests', 'docs'))
 )

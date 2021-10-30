@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 
 import adbs
-import os
 import signal
 from datetime import date
+from os import path, environ
 from .convert_dialog import ConverterDialog
 from .utils import format_output_date
+
+
+basedir = path.abspath(path.dirname(__file__))
+icon_file = path.join(basedir, 'assets', 'nepaliflag.png')
 
 try:
     import gi
@@ -20,12 +24,12 @@ except ImportError:
 
 APPINDICATOR_ID = 'nepcal-applet'
 indicator = ai.Indicator.new(APPINDICATOR_ID,
-                             os.path.abspath('nepaliflag.png'),
+                             icon_file,
                              ai.IndicatorCategory.OTHER)
 
 
 def get_today():
-    os.environ['TZ'] = 'Asia/Kathmandu'
+    environ['TZ'] = 'Asia/Kathmandu'
     today = date.today().strftime('%Y/%m/%d')
     bs_today = adbs.ad_to_bs(today)
     return format_output_date(bs_today)
