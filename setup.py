@@ -8,7 +8,7 @@ with open('README.rst') as f:
 
 setup(
     name='nepcal_applet',
-    version='0.0.2',
+    version='0.0.3',
     description='Nepali calendar applet',
     long_description=readme,
     author='Samar Acharya',
